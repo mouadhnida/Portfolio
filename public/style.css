@@ -1,0 +1,66 @@
+:root {
+    --body-bg: rgb(15, 28, 50);
+    --logo-font: 'Pacifico', cursive;
+    --text-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--text-font);
+    padding: 0;
+    margin: 0;
+    background: var(--body-bg);
+    color: hsl(227, 50%, 91%);
+    overflow: hidden;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.logo {
+    font-family: var(--logo-font);
+    font-size: 2rem;
+    position: relative;
+    left: 12rem;
+}
+
+.nav-bar {
+    width: 30rem;
+    font-size: 1.2rem;
+    position: relative;
+    right: 7rem;
+    
+} 
+
+.nav-bar-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header {
+    position: relative;
+    top: 13rem;
+    left: 17rem;
+}
+
+.title{
+    font-size: 3.5rem;
+}
+
+.name {
+    color: hsl(200, 84%, 78%);
+}
+
+.about-me {
+    font-size: 1.5rem;
+    width: 35rem;
+    line-height: 2.2rem;
+}
+
