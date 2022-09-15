@@ -115,7 +115,7 @@ header {
 
 .about-me {
     font-size: 1.5rem;
-    width: 35rem;
+    width: 40vw;
     line-height: 2.2rem;
 }
 
@@ -137,16 +137,27 @@ header {
 }
 
 .illustration {
-    max-width: 550px;
-    min-width: 100px;
+    max-width: 35vw;
     max-height: 550px;
     position: absolute;
-    left: 45rem;
+    left: 50rem;
     bottom: -15rem;
 }
 
-@media only screen and(max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
     .nav-bar-list {
-        display: none;
+      display: none;
+    }
+    .typewriter h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    header {
+        left: 5rem;
+    }
+    .logo {
+        width: 20rem;
     }
 }
