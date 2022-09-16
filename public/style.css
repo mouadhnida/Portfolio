@@ -144,6 +144,41 @@ header {
     bottom: -15vw;
 }
 
+.burger-menu {
+    display: none;
+    width: 40px;
+
+    
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked + label > .burger-menu .menu-1{
+    transform: rotate(45deg);
+    top: .75rem;
+}
+
+#checkbox:checked + label > .burger-menu .menu-3{
+    transform: rotate(-45deg);
+    bottom: .75rem;
+}
+
+#checkbox:checked + label > .burger-menu .menu-2{
+    opacity: 0;
+}
+
+
+.menu-1, .menu-2, .menu-3 {
+    position: relative;
+    width: 40px;
+    height: 5px;
+    background: var(--text-color);
+    border-radius: 5px;
+    transition: all .5s;
+}
+
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
     .typewriter h1 {
           font-size: 2.5rem;
@@ -168,7 +203,9 @@ header {
         display: none;
     }
     .nav-bar-list {
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
     }
     header {
         left: 20vw;
@@ -177,6 +214,39 @@ header {
         font-size: 5.5vw;
     }
     .logo {
+        width: 10rem;
         left: 20vw;
+    }
+    .burger-menu {
+        cursor: pointer;
+        position: fixed;
+        top: 2rem;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        right: 1rem;
+        
+    }
+    .menu-1, .menu-2, .menu-3 {
+        display: block;
+    }
+    #checkbox:checked + label ~ .nav-bar-list {
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: -7rem;
+        height: 30rem;
+        width: 10rem;
+        justify-content: space-around;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 5px;
+        background-color: rgba(0, 0, 0, .5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        visibility: visible;
+        opacity: 1;
+        
     }
 }
