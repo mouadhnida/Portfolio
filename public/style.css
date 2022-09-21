@@ -5,6 +5,9 @@
     --text-color: hsl(227, 50%, 91%);
     --aqua-blue: hsl(200, 84%, 78%);
 }
+html{
+    scroll-behavior: smooth;
+} 
 
 body {
     font-family: var(--text-font);
@@ -261,7 +264,39 @@ main {
     color: var(--text-color);
     position: relative;
     top: 140vh;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.work-header {
+    position: relative;
+    font-size: 3rem;
+}
+
+.work-header::after {
+    position: absolute;
+    content: "";
+    background: var(--aqua-blue);
+    height: 5px;
+    top: 4.5rem;
+    left: 0;
+    width: 0;
+    display: inline-block;
+    transition: width .5s;
+}
+
+.work-header:hover::after {
+    width: 100%;
+}
+
+.portfolio-project {
+    position: relative;
+    top: 10rem;
+} 
+
 
 
 /*media queries */
@@ -371,11 +406,6 @@ main {
         height: 50px !important;
     }
 }
-/*@media only screen and (max-height: 1023px) {
-    main {
-        height: 40rem;
-    }
-}*/
 @media only screen and (min-height: 1024px) {
     main {
         min-height: 20rem;
