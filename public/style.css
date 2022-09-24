@@ -3,7 +3,8 @@
     --logo-font: 'Pacifico', cursive;
     --text-font: 'Roboto', sans-serif;
     --text-color: hsl(227, 50%, 91%);
-    --aqua-blue: hsl(200, 84%, 78%);
+    --aqua-blue-2: hsl(200, 84%, 78%);
+    --aqua-blue: #379a9e;
 }
 html{
     scroll-behavior: smooth;
@@ -217,7 +218,7 @@ main {
 .skills-heading::after {
     position: absolute;
     content: "";
-    background: rgb(15, 28, 100);
+    background: var(--aqua-blue);
     height: 5px;
     top: 4rem;
     left: 0;
@@ -259,13 +260,13 @@ main {
     transform: scale(1.2);
 }
 
-
 .work {
+    background: var(--dark-blue);
     color: var(--text-color);
     position: relative;
-    top: 140vh;
+    top: 100vh;
     width: 100%;
-    height: 60vh;
+    min-height: 40rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -292,11 +293,64 @@ main {
     width: 100%;
 }
 
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
 .portfolio-project {
+    width: 500px;
+    height: 350px;
+    border-radius: 5px;
     position: relative;
-    top: 10rem;
+    top: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+    transition: all .5s;
 } 
 
+.todo-app {
+    width: 500px;
+    height: 350px;
+}
+
+.portfolio-project:hover {
+    transform: scale(1.2);
+}
+
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+}
+
+.technologies {
+    position: relative;
+    top: -75px;
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.technologies-icons {
+    position: relative;
+    top: -15px;
+    width: 50px;
+    height: 50px;
+}
+
+.express {
+    filter: invert(92%) sepia(3%) saturate(1126%) hue-rotate(193deg) brightness(99%) contrast(93%);
+}
+
+.js {
+    filter: invert(95%) sepia(76%) saturate(2221%) hue-rotate(322deg) brightness(111%) contrast(84%);
+}
 
 
 /*media queries */
