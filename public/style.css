@@ -1,8 +1,8 @@
 :root {
-    --dark-blue: hsl(218, 54%, 13%);
+    --dark-blue: rgb(15, 28, 51);
     --logo-font: 'Pacifico', cursive;
     --text-font: 'Roboto', sans-serif;
-    --text-color: hsl(227, 50%, 91%);
+    --text-color: hsl(227, 51%, 91%);
     --aqua-blue-2: hsl(200, 84%, 78%);
     --aqua-blue: #379a9e;
 }
@@ -182,7 +182,7 @@ header {
     position: relative;
     width: 40px;
     height: 5px;
-    background: var(--text-color);
+    background: var(--aqua-blue);
     border-radius: 5px;
     transition: all .5s;
 }
@@ -257,8 +257,9 @@ main {
 }
 
 .icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(25deg);
 }
+
 
 .work {
     background: var(--dark-blue);
@@ -352,10 +353,14 @@ main {
     filter: invert(95%) sepia(76%) saturate(2221%) hue-rotate(322deg) brightness(111%) contrast(84%);
 }
 
-
 /*media queries */
 /*media queries */
 /*media queries */
+@media  only screen and (min-width: 1024px) {
+    .work {
+        top: 75rem;
+    }
+}
 
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
     .typewriter h1 {
@@ -378,6 +383,11 @@ main {
         width: 130px !important;
         height: 130px !important;
     }
+    .work {
+        top: 75rem;
+    }
+    
+    
 }
 
 @media only screen and (max-width: 767px) {
@@ -407,6 +417,7 @@ main {
         left: 20vw;
     }
     .burger-menu {
+        z-index: 999;
         cursor: pointer;
         position: fixed;
         top: 2rem;
@@ -452,6 +463,21 @@ main {
         width: 80px;
         height: 80px;
     }
+    .work-header {
+        font-size: 6.5vw;
+    }
+    .portfolio-project {
+        width: 250px;
+        height: 175px;
+    }
+
+    .todo-app {
+        width: 250px;
+        height: 175px;
+    }
+    .work {
+        top: 95rem;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -459,28 +485,36 @@ main {
         width: 50px !important;
         height: 50px !important;
     }
+    .work {
+        top: 70rem;
+        min-height: 20rem;
+        height: 90rem;
+    }
 }
 @media only screen and (min-height: 1024px) {
     main {
         min-height: 20rem;
-        height: 55rem;
+        height: 40rem;
+    }
+    .work {
+        top: 93rem;
+        min-height: 20rem;
+        height: 50rem;
     }
 }
 
-@media only screen and (min-height: 880px) {
+@media only screen and (max-width: 767px) and (min-height: 737px)  {
     main {
         top: 60rem;
     }
 }
-
-@media only screen and (max-width: 767px) and (max-height: 879px) and (min-height: 737px) {
-    main {
-        top: 65rem;
+@media only screen and (max-width: 767px) and (min-width:501px) and (max-height: 879px)  {
+    .work {
+        top: 90rem;
     }
 }
-
 @media only screen and (max-width: 767px) and (max-height: 736px) {
     main {
-        top: 50rem;
+        top: 55rem;
     }
 }
