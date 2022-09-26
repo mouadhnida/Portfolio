@@ -7,6 +7,9 @@ const nodemailer = require('nodemailer');
 app.use(express.static('./public'));
 app.use(express.json())
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './index.html'))
+} )
 
 app.get('/api/form', (req,res) => {
     res.json({ data: person })
