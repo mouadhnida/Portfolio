@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/83eb93a6e0.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -43,7 +43,7 @@
             </div>
             <p class="about-me">I'm a full-stack web developer & programmer living in Morocco,I'm focused in building web applications.</p>
             <button class="btn contact-me-button">Contact Me</button>
-            <img class="illustration" src="./public/illustration.svg" alt="coding illustration">
+            <img class="illustration" src="./illustration.svg" alt="coding illustration">
         </div>
     </header>
     <main id="main">
@@ -51,32 +51,47 @@
         <p class="experience-paragraphe">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident cum similique quia reiciendis minus sunt, doloremque recusandae quidem sint eos odio illum reprehenderit perspiciatis quod error fuga aliquid, molestias necessitatibus.</p>
         <h1 class="skills-heading skills">Skills:</h1>
         <div class="icons">
-            <img class=" icon react" src="./public/react.svg" alt="react">
-            <img class="icon git-icon" src="./public/git-icon.svg" alt="git-icon">
-            <img class="icon node-icon" src="./public/node-icon.svg" alt="node-icon">
-            <img class="icon express-icon" src="./public/express-icon.svg" alt="express-icon">
-            <img class="icon mongoDB-icon" src="./public/mongoDB-icon.svg" alt="mongoDB-icon">
+            <img class=" icon react" src="./react.svg" alt="react">
+            <img class="icon git-icon" src="./git-icon.svg" alt="git-icon">
+            <img class="icon node-icon" src="./node-icon.svg" alt="node-icon">
+            <img class="icon express-icon" src="./express-icon.svg" alt="express-icon">
+            <img class="icon mongoDB-icon" src="./mongoDB-icon.svg" alt="mongoDB-icon">
         </div>
     </main>
     <div class="work" id="work">
         <h1 class="work-header">Some Projects:</h1>
         <div class="projects">
             <div class="project">
-                <a href="https://github.com/mouadhnida/mouadhnida.github.io" class="portfolio-project"><img src="./public/Screenshot 2022-09-20 at 17.45.35_adobe_express.svg" alt="portfolio-project"></a>
+                <a href="https://github.com/mouadhnida/mouadhnida.github.io" class="portfolio-project"><img src="./Screenshot 2022-09-20 at 17.45.35_adobe_express.svg" alt="portfolio-project"></a>
                 <h2>Portfolio</h2>
-                <h3 class="technologies">Technologies used: <img class="technologies-icons" src="./public/html5.svg" alt="html icon"> <img class="technologies-icons" src="./public/css3-alt.svg" alt="css icon"></h3>
+                <h3 class="technologies">Technologies used: <img class="technologies-icons" src="./css3-alt.svg" alt="css icon"> <img class="technologies-icons js" src="./js.svg" alt="js icon"> <img class="technologies-icons" src="./node-icon.svg" alt="node icon"></h3>
             </div>
             <div class="project">
-                <a href="https://github.com/mouadhnida/to-do-app" class="portfolio-project"><img src="./public/Screenshot 2022-09-21 at 18.03.16.png" alt="portfolio-project" class="todo-app"></a>
+                <a href="https://github.com/mouadhnida/to-do-app" class="portfolio-project"><img src="./Screenshot 2022-09-21 at 18.03.16.png" alt="portfolio-project" class="todo-app"></a>
                 <h2>To-Do-App</h2>
-                <h3 class="technologies">Technologies used: <img class="technologies-icons" src="./public/node-icon.svg" alt="node icon"> <img class="technologies-icons express" src="./public/express-icon.svg" alt="express icon"> <img class="technologies-icons" src="./public/mongoDB-icon.svg" alt="mongoDB icon"></h3>
+                <h3 class="technologies">Technologies used: <img class="technologies-icons" src="./node-icon.svg" alt="node icon"> <img class="technologies-icons express" src="./express-icon.svg" alt="express icon"> <img class="technologies-icons" src="./mongoDB-icon.svg" alt="mongoDB icon"></h3>
             </div>
            <div class="project">
-                <a href="https://github.com/mouadhnida/weather_app" class="portfolio-project"><img src="./public/Screenshot 2022-09-21 at 18.17.19_adobe_express.svg" alt="portfolio-project"></a>
+                <a href="https://github.com/mouadhnida/weather_app" class="portfolio-project"><img src="./Screenshot 2022-09-21 at 18.17.19_adobe_express.svg" alt="portfolio-project"></a>
                 <h2>Weather-App</h2>
-                <h3 class="technologies">Technologies used: <img class="technologies-icons" src="./public/html5.svg" alt="html icon"> <img class="technologies-icons" src="./public/css3-alt.svg" alt="css icon"> <img class="technologies-icons js" src="./public/js.svg" alt="js icon"></h3>
+                <h3 class="technologies">Technologies used: <img class="technologies-icons" src="./html5.svg" alt="html icon"> <img class="technologies-icons" src="./css3-alt.svg" alt="css icon"> <img class="technologies-icons js" src="./js.svg" alt="js icon"></h3>
             </div> 
         </div>
     </div>
+    <div class="contact" id="contact">
+        <h1>Send me a message!</h1>
+        <h2>Got a question or proposal, or just want to say hello? Go ahead</h2>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" placeholder="Enter your name" id="name" name="name">
+            <label for="email">Email Address:</label>
+            <input type="email" placeholder="Enter your email address" id="email" name="email">
+            <label for="message">Your Message:</label>
+            <input type="text" placeholder="Your message" id="message" name="message">
+            <button type="submit" id="btn-submit">Submit</button>
+        </form>
+    </div>
 </body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./form.js"></script>
 </html>
