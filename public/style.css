@@ -358,11 +358,12 @@ main {
     flex-direction: column;
     background: var(--text-color);
     position: relative;
-    top: 90rem;
-    width: 100%;
-    height: 33rem;
+    top: 85rem;
+    width: 100vw;
+    height: 45rem;
     color: black;
     align-items: center;
+    gap: 30px;
 }
 
 .contact h1, .contact h2 {
@@ -371,9 +372,9 @@ main {
 
 .form {
     position: relative;
-    top: 3rem;
-    width: 700px;
-    height: 250px;
+    left: 2rem;
+    width: 800px;
+    height: 350px;
     display: grid;
     grid-template-areas: 'input-1 input-2'
                         'input-3 input-3'
@@ -455,7 +456,8 @@ main {
 
 
 .contact-header {
-
+    left: 2rem;
+    font-size: large;
     color: rgb(15, 28, 100);
     position: relative;
     top: 2rem;
@@ -476,6 +478,10 @@ main {
 
 .contact-header:hover::after {
     width: 100%;
+}
+
+.contact-header-2 {
+    font-size: 2rem;
 }
 /*media queries */
 /*media queries */
@@ -575,7 +581,7 @@ main {
         
     }
 
-    .skills-heading {
+    .skills-heading, .contact-header{
         font-size: 6.5vw;
     }
 
@@ -602,6 +608,11 @@ main {
     .work {
         top: 95rem;
     }
+
+    .contact-header-2 {
+        width: 300px;
+        flex-wrap: wrap;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -615,6 +626,24 @@ main {
         height: 90rem;
     }
 }
+@media only screen and (max-width: 855px) {
+    .form {
+        left: 0;
+        width: 250px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        top: 0rem;
+        gap: 30px;
+    }
+    .input-message {
+        position: relative;
+        top: 1rem;
+        width: 300px;
+    }
+
+}
+
 @media only screen and (min-height: 1024px) {
     main {
         min-height: 20rem;
