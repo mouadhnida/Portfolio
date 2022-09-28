@@ -55,13 +55,13 @@ a {
     align-items: center;
 }
 
-.nav-bar-list > li {
+.nav-bar-list > li ,.nav-bar-list > a  {
     position: relative;
     padding: 0 10px;
     cursor: pointer;
 }
 
-.nav-bar-list > li::after {
+.nav-bar-list > li::after, .nav-bar-list > a::after {
     content: "";
     position: absolute;
     background: var(--aqua-blue);
@@ -73,7 +73,7 @@ a {
     transition: all .5s;
 }
 
-.nav-bar-list > li:hover:after {
+.nav-bar-list > li:hover:after, .nav-bar-list > a:hover:after {
     width: 100%;
 }
 
@@ -117,7 +117,7 @@ header {
     from, to { border-color: transparent }
     50% { border-color: var(--aqua-blue)}
 }
-.name {
+.aqua-word {
     color: var(--aqua-blue);
 }
 
@@ -354,15 +354,129 @@ main {
 }
 
 .contact {
+    display: flex;
+    flex-direction: column;
     background: var(--text-color);
     position: relative;
-    top: 75rem;
-    border: 1px solid red;
+    top: 90rem;
     width: 100%;
-    height: 100%;
+    height: 33rem;
     color: black;
+    align-items: center;
 }
 
+.contact h1, .contact h2 {
+    color: var(--dark-blue);
+}
+
+.form {
+    position: relative;
+    top: 3rem;
+    width: 700px;
+    height: 250px;
+    display: grid;
+    grid-template-areas: 'input-1 input-2'
+                        'input-3 input-3'
+                        'input-4 input-4';
+}
+
+.input-div {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.input-div input , .input-div textarea{
+    font-size: 1.25rem;
+    position: relative;
+    background: none;
+    color: rgb(15, 28, 100);
+    border: none;
+    border-bottom: 1px solid rgba(15, 28, 51, 0.5);
+    height: 50px;
+}
+
+.input-div input:focus , .input-div textarea:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(15, 28, 51, 1);
+}
+.input-div input:focus::placeholder , .input-div textarea:focus::placeholder{
+    color: transparent;
+}
+
+.input-div input:focus + label , .input-div textarea:focus + label{
+    opacity: 1;
+}
+
+::placeholder {
+    color: var(--dark-blue);
+    opacity: 0.7;
+}
+
+.input-div label {
+    position: relative;
+    top: -4rem;
+    color: var(--dark-blue);
+    opacity: 0.5;
+}
+
+.input-message label {
+    top: -5rem;
+}
+
+.input-message textarea {
+    resize: none;
+    height: 40px !important;
+}
+.input-message {
+    width: 700px;
+}
+.input-1 {
+    grid-area: input-1;
+}
+
+.input-2 {
+    grid-area: input-2;
+}
+
+.input-3 {
+    grid-area: input-3;
+}
+
+.input-4 {
+    width : 17rem;
+    grid-area: input-4;
+}
+
+.input-4:hover {
+    color: var(--text-color);
+    box-shadow: inset 17em 0 0 0 var(--aqua-blue)
+}
+
+
+.contact-header {
+
+    color: rgb(15, 28, 100);
+    position: relative;
+    top: 2rem;
+    font-size: 3rem;
+}
+
+.contact-header::after {
+    position: absolute;
+    content: "";
+    background: var(--aqua-blue);
+    height: 5px;
+    top: 4rem;
+    left: 0;
+    width: 0;
+    display: inline-block;
+    transition: width .5s;
+}
+
+.contact-header:hover::after {
+    width: 100%;
+}
 /*media queries */
 /*media queries */
 /*media queries */
@@ -477,8 +591,8 @@ main {
         font-size: 6.5vw;
     }
     .portfolio-project {
-        width: 250px;
-        height: 175px;
+        width: 330px;
+        height: 190px;
     }
 
     .todo-app {
