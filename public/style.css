@@ -61,7 +61,7 @@ a {
     cursor: pointer;
 }
 
-.nav-bar-list > li::after, .nav-bar-list > a::after {
+.nav-bar-list > li::after, .nav-bar-list > a:not(:last-child):after {
     content: "";
     position: absolute;
     background: var(--aqua-blue);
