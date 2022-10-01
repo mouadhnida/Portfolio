@@ -608,6 +608,9 @@ main {
         top: 95rem;
     }
 
+    .contact-header {
+        left: -1.5rem;
+    }
     .contact-header-2 {
         width: 300px;
         flex-wrap: wrap;
@@ -667,6 +670,6 @@ main {
 }
 @media only screen and (max-width: 767px) and (max-height: 736px) {
     main {
-        top: 55rem;
+        top: 57rem;
     }
 }
